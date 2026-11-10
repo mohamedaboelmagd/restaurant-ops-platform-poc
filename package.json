@@ -1,0 +1,19 @@
+{
+  "name": "restaurant-ops-platform-poc",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Multi-tenant restaurant operations platform proof of concept (NestJS/TypeScript API + React dashboard)",
+  "scripts": {
+    "setup": "npm ci && npm ci --prefix backend && npm ci --prefix frontend",
+    "build": "npm run build --prefix backend && npm run build --prefix frontend",
+    "test": "npm test --prefix backend",
+    "lint": "npm run lint --prefix backend && npm run lint --prefix frontend",
+    "start": "npm run setup && npm run build && npm run serve",
+    "serve": "npm start --prefix backend",
+    "dev:api": "npm run start:dev --prefix backend",
+    "dev:web": "npm run dev --prefix frontend",
+    "build:demo": "npm run build --prefix frontend",
+    "deploy:demo": "npm run build:demo && npx -y firebase-tools@latest deploy --only hosting:demo",
+    "smoke:demo": "node scripts/demo-smoke.mjs"
+  }
+}

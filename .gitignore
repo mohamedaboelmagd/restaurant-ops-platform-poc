@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.firebase/
+coverage/
+*.db
+*.db-*
+*.sqlite
+data/
+.env
+.env.*
+!.env.example
+*.log
+firebase-debug.log*
+.DS_Store
+
+*.tsbuildinfo
